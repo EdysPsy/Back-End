@@ -1,0 +1,20 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Aulas de Back-End do professor Fernando",
+  "homepage": "https://github.com/EdysPsy/Back-End#readme",
+  "bugs": {
+    "url": "https://github.com/EdysPsy/Back-End/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdysPsy/Back-End.git"
+  },
+  "license": "ISC",
+  "author": "edson",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
