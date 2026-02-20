@@ -9,22 +9,24 @@
             font: nornmal 20 pt Arial;
             background-color: red;
             color: white;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             line-height: 200px;
             text-align: center;
         }
        </style>
     </head>
   <body>
-    <div id="figura" onclick="clicar()">Clique aqui
+    <div id="figura" onclick="clicar()">Clique aqui </div>
  </body>
  <h1>Olá Pessoal</h1>
  <div> Fluminense Campeão</div>
  <h2>Londrina a Cidade</h2>
- </div>   
+   
  <script>
-    function clicar() {    
+    function clicar() {  
+        let area = document.getElementById("figura");
+        area.style.backgroundColor = "blue";  
     }
  </script>
 </html>
