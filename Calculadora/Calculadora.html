@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+        }
+
+        .operation {
+            background: #667eea;
+        }
+
+        .operation:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .result-group {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-label {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        #resultado {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            word-break: break-all;
+        }
+
+        .clear-btn {
+            width: 100%;
+            background: #e74c3c;
+            margin-top: 15px;
+        }
+
+        .clear-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>🧮 Calculadora</h1>
+        
+        <div class="input-group">
+            <label for="numero1">Primeiro Número:</label>
+            <input type="number" id="numero1" placeholder="Digite o primeiro número" step="any">
+        </div>
+
+        <div class="input-group">
+            <label for="numero2">Segundo Número:</label>
+            <input type="number" id="numero2" placeholder="Digite o segundo número" step="any">
+        </div>
+
+        <div class="buttons">
+            <button class="operation" onclick="somar()">➕ Somar</button>
+            <button class="operation" onclick="subtrair()">➖ Subtrair</button>
+            <button class="operation" onclick="multiplicar()">✖️ Multiplicar</button>
+            <button class="operation" onclick="dividir()">➗ Dividir</button>
+        </div>
+
+        <div class="result-group">
+            <div class="result-label">Resultado:</div>
+            <div id="resultado">0</div>
+        </div>
+
+        <button class="clear-btn" onclick="limpar()">🗑️ Limpar</button>
+    </div>
+
+    <script src="Calculadora.js"></script>
+</body>
+</html>
